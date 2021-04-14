@@ -19,7 +19,7 @@ class JobTests: XCTestCase {
     func testSalariedRaise() {
         let job = Job(title: "Guest Lecturer", type: Job.JobType.Salary(1000))
         XCTAssert(job.calculateIncome(50) == 1000)
-
+        
         job.raise(byAmount: 1000)
         XCTAssert(job.calculateIncome(50) == 2000)
 
